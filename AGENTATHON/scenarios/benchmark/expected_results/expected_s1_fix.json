@@ -1,0 +1,11 @@
+{
+  "scenario_id": "S1",
+  "target_file": "data_processor/calculator.py",
+  "bug_description": "calculate_discount subtracts discount_percent directly instead of calculating percentage of price",
+  "faulty_code": "return round(price - discount_percent, 2)",
+  "correct_code": "return round(price * (1.0 - (discount_percent / 100.0)), 2)",
+  "expected_tests_total": 10,
+  "expected_tests_passed_after_fix": 10,
+  "expected_tests_failed_after_fix": 0
+}
+
